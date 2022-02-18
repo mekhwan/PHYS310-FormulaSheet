@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsfonts,amsmath,amssymb,anysize,cancel,fancyhdr,graphicx,listings,siunitx,verbatim,xfrac,xcolor}
+
+\marginsize{1.5cm}{1.5cm}{1cm}{1cm}
+\linespread{1.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Phys. 310 Quantum Mechanics and Its Applications I (Term 212)}
+\rhead{Formula Sheet}
+
+\begin{document}
+\subsection*{\underline{The Wave Function:}}
+$\Psi(x,t)$ obeys Schrodinger's equation
+\begin{align*}
+    &\int_{-\infty}^\infty |\Psi(x,t)|^2dx=1&& \rho(x,t)=|\Psi(x,t)|^2\\
+    \langle \hat{x}\rangle&=\int_{-\infty}^\infty x|\Psi(x,t)|^2dx;&&\langle \hat{p}\rangle=\int_{-\infty}^\infty \Psi^*(x,t)\frac{\hbar}{i}\frac{\partial}{\partial x}\Psi(x,t)dx;\\
+    \langle Q(\hat{x},\hat{p})\rangle&=\int_{-\infty}^\infty \Psi^*(x,t)Q(x,\frac{\hbar}{i}\frac{\partial}{\partial x})\Psi(x,t)dx&&J(x,t)=\frac{i\hbar}{2m}\left( \Psi\frac{\partial \Psi^*}{\partial x}-\Psi^*\frac{\partial \Psi}{\partial x} \right)\\
+    i\hbar \frac{\partial }{\partial t}\Psi(x,t)&=\left[ -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x) \right] \Psi(x,t)&&\mathbf{\hat{H}}\psi(x)=\left[ -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x) \right] \psi(x)=E\psi(x)\\
+    \Psi(x,t)&=\psi(x)\phi(t)&&\phi(t)=e^{-iEt/\hbar} 
+\end{align*}
+\subsection*{\underline{Properties of the Solution of 1D stationary Schrodinger Equation:}}
+
+\begin{enumerate}
+\item For 1D potential, all stationary solutions are non-degenerate.
+\item Stationary square integrable solution exist only for E > min{V(x)} 
+\item If V(x) is real, then $\Psi$(x) can be taken to be real.
+\item Eigenvalues of a Hermitian Hamiltonian are all real.
+\item The eigenfunctions of a Hermitian operator form a complete orthogonal basis set.
+\item 1D Solution is real up to an over all phase.
+\item For a given 1D even potential the stationary states are either even or odd.
+\item The wave function and its first order space derivative is continuous all over and in particular at the boundaries of a finite potential.
+\item At boundaries with Dirac delta function potential, the first space derivative of the wavefunction is discontinuous. 
+\item Physical solution should be finite all over space, no blow ups, in particular at infinity.
+\item The number of nodes (zeros) of the eigenfunction increases by one unit as we move from the ground state (zero nodes) to higher excited states.
+\item Bound states exist only for confining potential (classically between turning points of the potential).
+\end{enumerate}
+\subsection*{\underline{Complete Basis Set:}}
+Given that:
+\begin{equation*}
+    H\psi_n(x)-E_n\psi_n(x)\quad \int\phi^*_n(x)\phi_m(x)dx=\delta_{nm}
+\end{equation*}
+Then, where $\{\phi_n\}$ is a complete set:
+\begin{align*}
+    \psi(x)&=\sum_nc_n\phi_n(x)\\
+    \int\psi^*(x)\psi(x)dx&=\sum_n|c_n|^2=1\\
+    E&=\int\psi^*_n(x)H\psi_m(x)dx=\sum_n|c_n|^2E_n\\
+    \Psi(x,0)&=\psi(x)=\sum_nc_n\phi_n(x)\implies\Psi(x,t)=\sum_nc_ne^{-iEt/\hbar}\phi_n(x)\\
+    a_n&=\int\phi_n^*\Psi(x,0)dx
+\end{align*}
+\subsection*{\underline{Commutator Properties:}}
+\begin{align*}
+    &[A,A]=0\\
+    &[A,B]=-[B,A]\\
+    &[A+B,C]=[A,C]+[B,C]\\
+    &[A,[B,C]]+[B,[C,A]]+[C,[A,B]]=0
+\end{align*}
+\subsection*{\underline{Miscellaneous:}}
+\begin{align*}
+    \int_{-\infty}^\infty e^{-a(x+b)^2}\, dx=\sqrt{\frac{\pi}{a}}& 
+    &\delta_{ij}=\left\{
+        \begin{matrix}
+            1,\quad i=j\\
+            0,\quad i\neq j
+        \end{matrix}
+    \right.
+\end{align*}
+\end{document}

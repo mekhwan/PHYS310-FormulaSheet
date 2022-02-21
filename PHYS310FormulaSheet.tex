@@ -89,11 +89,11 @@ If $a$ is an eigenvalue of the operator $\hat{A}$, $\hat{A}\psi=a\psi$. Then, th
     &
     &c_n=\sqrt{\frac{2}{a}}\int_0^a\sin\left( \frac{n\pi}{a}x \right)\Psi(x,0)\,dx
 \end{align*}
-\subsection*{\underline{Ring:}}
+\subsection*{\underline{Particle on a Ring:}}
 \begin{align*}
-    &\psi_\pm(\theta)=\frac{1}{\sqrt{2\pi}}\exp{\pm i\frac{R\theta}{\hbar}\sqrt{2mE}};
+    &\psi_\pm(\theta)=\frac{1}{\sqrt{2\pi}}\exp{\pm i\frac{R\theta}{\hbar}\sqrt{2mE}}=\frac{1}{\sqrt{2\pi}}e^{\pm ikx}
     &
-    &x=R\theta
+    &x=R\theta; L=2\pi R; k=\frac{2\pi n}{L}=\frac{n}{R}
     \\
     &\psi(\theta)=\frac{1}{\sqrt{2\pi}}\exp{\pm in\theta}
     &
@@ -103,7 +103,7 @@ If $a$ is an eigenvalue of the operator $\hat{A}$, $\hat{A}\psi=a\psi$. Then, th
 \begin{align*}
     &V(x)=\frac{1}{2}kx^2=\frac{1}{2}m(\omega x)^2\quad \left( \omega\equiv\sqrt{k/m} \right)
     &
-    &E_n=\hbar\omega\left( n+\frac{1}{2} \right)
+    &E_n=\hbar\omega\left( n+\frac{1}{2} \right);n=0,1,2,\dots
     \\
     &H=\frac{1}{2m}[p^2+(m\omega x)^2]=\hbar\omega\left( N+\frac{1}{2} \right)
     &
@@ -116,6 +116,10 @@ If $a$ is an eigenvalue of the operator $\hat{A}$, $\hat{A}\psi=a\psi$. Then, th
     &[N,a_\pm]=\pm a_\pm
     &
     &a_\pm\equiv \frac{1}{\sqrt{2\hbar m\omega}}\left( \mp ip+m\omega x \right)
+    \\
+    &x=\sqrt{\frac{\hbar}{2m\omega}}\,(a_++a_-)
+    &
+    &p=i\sqrt{\frac{m\omega\hbar}{2}}\,(a_+ - a_-)
     \\
     &a_+\psi_n=\sqrt{n+1}\psi_{n+1}
     &

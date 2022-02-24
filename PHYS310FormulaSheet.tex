@@ -153,14 +153,19 @@ Where $\Delta Q$ is the uncertainity for the Hermitian Operator Q.
 where $\Theta(x)$ is Heaviside or step function. 
 \subsection*{\underline{Bound State:}}
 \begin{align*}
+    &V=-\alpha\delta(x), \ \alpha>0
+    &
     &\psi(x)=\sqrt{\frac{m\alpha}{\hbar^2}}\ e^{\frac{m\alpha}{\hbar^2}|\alpha|}
 \end{align*}
+\begin{equation*}
+    E=-\frac{m\alpha^2}{2\hbar^2}
+\end{equation*}
 \subsection*{\underline{Scattering State:}}
 \begin{align*}
     &V(x)=\left\{
         \begin{matrix}
-            Ae^{ikx}+Be^{-ikx}, x\leq0\\
-            Fe^{ikx}, x\geq0
+            Ae^{ikx}+Be^{-ikx}, x<0\\
+            Fe^{ikx}, x>0
         \end{matrix}
     \right.
     &

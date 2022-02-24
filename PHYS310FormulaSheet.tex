@@ -31,6 +31,17 @@
 \item The number of nodes (zeros) of the eigenfunction increases by one unit as we move from the ground state (zero nodes) to higher excited states.
 \item Bound states exist only for confining potential (classically between turning points of the potential).
 \end{enumerate}
+\subsection*{\underline{The Origin of Quantum Physics:}}
+\begin{align*}
+    &E=h\nu
+    &p=\frac{h}{\lambda}
+    &\\
+    &E=\hbar\omega
+    &p=\hbar k
+    &\\
+    &\lambda=\frac{h}{p}
+    &\lambda_C = \frac{h}{mc}
+\end{align*}
 \subsection*{\underline{The Wave Function:}}
 $\Psi(x,t)$ obeys Schrodinger's equation, and the normalization condition $\int_{-\infty}^\infty |\Psi(x,t)|^2dx=1$:
 \begin{flalign*}
@@ -43,11 +54,30 @@ $\Psi(x,t)$ obeys Schrodinger's equation, and the normalization condition $\int_
     &&H\psi(x)=E\psi(x)
     &\\
     &\rho(x,t)=|\Psi(x,t)|^2;
-    &&\frac{\partial \rho}{\partial t}+\frac{\partial J}{\partial x}=0;
+    &&\frac{\partial}{\partial t}\rho(\textbf{x},t)+\nabla \cdot \textbf{J}(\textbf{x},t)=0;
     &&J(x,t)=\frac{i\hbar}{2m}\left( \Psi\frac{\partial \Psi^*}{\partial x}-\Psi^*\frac{\partial \Psi}{\partial x} \right)
-    &
+    &\\
+    &p=\frac{\hbar}{i}\nabla
+    &&[x_i,p_j] = i\hbar \ \delta_{i,j}
 \end{flalign*}
-A Hermitian operator $Q$ obey: $\int\psi^*(x)Q\psi(x)\,dx=\int(Q\psi(x))^*\psi(x)\,dx$.
+A Hermitian operator $Q$ obey: $\int\psi^*(x)Q\psi(x)\,dx=\int(Q\psi(x))^*\psi(x)\,dx$, and $Q^\dagger = Q$.
+\subsection*{\underline{Fourier Transform}}
+\begin{flalign*}
+    &\Psi(x)=\frac{1}{\sqrt{2\pi}}\int dk\Phi(k)e^{ikx},
+    &&\Phi(k)=\frac{1}{\sqrt{2\pi}}\int dx\Psi(x)e^{-ikx}
+    &&\int dx|\Psi(x)|^2 = \int dk|\Phi(k)|^2
+    &\\
+    &\Psi(x)=\frac{1}{(2\pi)^\frac{3}{2}}\int d^3k\Phi(\textbf{k})e^{i\textbf{k}\cdot \textbf{x}},
+    &&\Phi(k)=\frac{1}{(2\pi)^\frac{3}{2}}\int d^3x\Psi(\textbf{x})e^{-i\textbf{k}\cdot \textbf{x}}
+    &&\int d^x|\Psi(\textbf{x})|^2 = \int d^k|\Phi(\textbf{k})|^2
+    &\\
+    &\frac{1}{2\pi} \int_{-\infty}^\infty e^{ikx}dx = \delta(k)
+    &&\frac{1}{(2\pi)^3} \int_{-\infty}^\infty e^{i\textbf{k}\cdot \textbf{x}}d^3x = \delta^{(3)}(k)
+\end{flalign*}
+\subsection*{\underline{Wavepackets}}
+\begin{equation*}
+    v_{group} =\frac{d\omega}{dk};\  \Delta k\Delta x \simeq 1
+\end{equation*}
 \subsection*{\underline{Complete Basis Set:}}
 Given that $H\psi_n(x)=E_n\psi_n(x);\quad \int\phi^*_n(x)\phi_m(x)dx=\delta_{nm}$, where $\{\phi_n\}$ is a complete set, then:
 \begin{align*}
@@ -59,12 +89,13 @@ Given that $H\psi_n(x)=E_n\psi_n(x);\quad \int\phi^*_n(x)\phi_m(x)dx=\delta_{nm}
 \end{align*}
 \subsection*{\underline{Commutator Properties:}}
 \begin{align*}
-    &[A,A]=0\\
-    &[A,B]=-[B,A]\\
-    &[A+B,C]=[A,C]+[B,C]\\
-    &[A,[B,C]]+[B,[C,A]]+[C,[A,B]]=0\\
-    &[AB,C]=[A,C]B+A[B,C]\\
-    &[A,BC]=[A,B]C+B[A,C]
+    &[A,A]=0;
+    &&[A,B]=-[B,A];
+    &&[A+B,C]=[A,C]+[B,C]
+    &\\
+    &[A,[B,C]]+[B,[C,A]]+[C,[A,B]]=0;
+    &&[AB,C]=[A,C]B+A[B,C];
+    &&[A,BC]=[A,B]C+B[A,C]
 \end{align*}
 \subsection*{\underline{Operators:}}
 If $a$ is an eigenvalue of the operator $\hat{A}$, $\hat{A}\psi=a\psi$. Then, the following properties hold:

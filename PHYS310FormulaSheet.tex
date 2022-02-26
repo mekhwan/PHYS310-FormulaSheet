@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+    \documentclass[a4paper,12pt]{article}
 \usepackage{amsfonts,amsmath,amssymb,anysize}
 \usepackage{bibentry,blindtext,braket,cancel}
 \usepackage{fancyhdr,graphicx}
@@ -32,7 +32,7 @@
 \item Bound states exist only for confining potential (classically between turning points of the potential).
 \end{enumerate}
 \subsection*{\underline{The Origin of Quantum Physics:}}
-\begin{align*}
+\begin{align}
     &E=h\nu
     &p=\frac{h}{\lambda}
     &\\
@@ -41,10 +41,10 @@
     &\\
     &\lambda=\frac{h}{p}
     &\lambda_C = \frac{h}{mc}
-\end{align*}
+\end{align}
 \subsection*{\underline{The Wave Function:}}
 $\Psi(x,t)$ obeys Schrodinger's equation, and the normalization condition $\int_{-\infty}^\infty |\Psi(x,t)|^2dx=1$:
-\begin{flalign*}
+\begin{flalign}
     &\braket{x}=\int_{-\infty}^\infty x|\Psi(x,t)|^2dx;
     &&\braket{p}=\int_{-\infty}^\infty \Psi^*(x,t)\frac{\hbar}{i}\frac{\partial}{\partial x}\Psi(x,t)dx;
     &&\braket{Q(\hat{x},\hat{p})}=\int_{-\infty}^\infty \Psi^*(x,t)Q\Psi(x,t)dx
@@ -59,10 +59,10 @@ $\Psi(x,t)$ obeys Schrodinger's equation, and the normalization condition $\int_
     &\\
     &p=\frac{\hbar}{i}\nabla
     &&[x_i,p_j] = i\hbar \ \delta_{i,j}
-\end{flalign*}
+\end{flalign}
 A Hermitian operator $Q$ obey: $\int\psi^*(x)Q\psi(x)\,dx=\int(Q\psi(x))^*\psi(x)\,dx$, and $Q^\dagger = Q$.
 \subsection*{\underline{Fourier Transform}}
-\begin{flalign*}
+\begin{flalign}
     &\Psi(x)=\frac{1}{\sqrt{2\pi}}\int dk\Phi(k)e^{ikx},
     &&\Phi(k)=\frac{1}{\sqrt{2\pi}}\int dx\Psi(x)e^{-ikx}
     &&\int dx|\Psi(x)|^2 = \int dk|\Phi(k)|^2
@@ -73,22 +73,22 @@ A Hermitian operator $Q$ obey: $\int\psi^*(x)Q\psi(x)\,dx=\int(Q\psi(x))^*\psi(x
     &\\
     &\frac{1}{2\pi} \int_{-\infty}^\infty e^{ikx}dx = \delta(k)
     &&\frac{1}{(2\pi)^3} \int_{-\infty}^\infty e^{i\textbf{k}\cdot \textbf{x}}d^3x = \delta^{(3)}(k)
-\end{flalign*}
+\end{flalign}
 \subsection*{\underline{Wavepackets}}
-\begin{equation*}
+\begin{equation}
     v_{group} =\frac{d\omega}{dk};\  \Delta k\Delta x \simeq 1
-\end{equation*}
+\end{equation}
 \subsection*{\underline{Complete Basis Set:}}
 Given that $H\psi_n(x)=E_n\psi_n(x);\quad \int\phi^*_n(x)\phi_m(x)dx=\delta_{nm}$, where $\{\phi_n\}$ is a complete set, then:
-\begin{align*}
+\begin{align}
     \psi(x)&=\sum_nc_n\phi_n(x)\\
     \int\psi^*(x)\psi(x)dx&=\sum_n|c_n|^2=1\\
     E&=\int\psi^*_n(x)H\psi_m(x)dx=\sum_n|c_n|^2E_n\\
     \Psi(x,0)&=\psi(x)=\sum_nc_n\phi_n(x)\implies\Psi(x,t)=\sum_nc_ne^{-iE_nt/\hbar}\phi_n(x)\\
     c_n&=\int\phi_n^*\Psi(x,0)dx
-\end{align*}
+\end{align}
 \subsection*{\underline{Commutator Properties:}}
-\begin{align*}
+\begin{align}
     &[A,A]=0;
     &&[A,B]=-[B,A];
     &&[A+B,C]=[A,C]+[B,C]
@@ -96,7 +96,7 @@ Given that $H\psi_n(x)=E_n\psi_n(x);\quad \int\phi^*_n(x)\phi_m(x)dx=\delta_{nm}
     &[A,[B,C]]+[B,[C,A]]+[C,[A,B]]=0;
     &&[AB,C]=[A,C]B+A[B,C];
     &&[A,BC]=[A,B]C+B[A,C]
-\end{align*}
+\end{align}
 \subsection*{\underline{Operators:}}
 If $a$ is an eigenvalue of the operator $\hat{A}$, $\hat{A}\psi=a\psi$. Then, the following properties hold:
 \begin{itemize}
@@ -106,13 +106,13 @@ If $a$ is an eigenvalue of the operator $\hat{A}$, $\hat{A}\psi=a\psi$. Then, th
     \item If two Hermitian operators, $\hat{A}$ and $\hat{B}$, commute and have no degenerate eigenvalues. Then each eigenvector of $\hat{A}$ is also an eigenvector of $\hat{B}$. A common orthonormal basis can be made of the joint eigenvectors of $\hat{A}$ and $\hat{B}$.
 \end{itemize}
 \subsection*{\underline{Uncertainty Principle:}}
-\begin{align*}
+\begin{align}
     &(\Delta Q)^2 = \braket{Q^2} - \braket{Q}^2 = \braket{(Q-\braket{Q})^2}
     &\Delta x \Delta p \geq \frac{\hbar}{2}
-\end{align*}
+\end{align}
 Where $\Delta Q$ is the uncertainity for the Hermitian Operator Q.
 \subsection*{\underline{1D Infinite Square Well:}}
-\begin{align*}
+\begin{align}
     &V(x)=\left\{
         \begin{matrix}
             0, 0\leq x\leq a\\
@@ -125,9 +125,9 @@ Where $\Delta Q$ is the uncertainity for the Hermitian Operator Q.
     &\Psi(x,t)=\sum_{n=1}^\infty c_n\sqrt{\frac{2}{a}}\sin\left( \frac{n\pi}{a}x \right)e^{-iE_nt/\hbar}
     &
     &c_n=\sqrt{\frac{2}{a}}\int_0^a\sin\left( \frac{n\pi}{a}x \right)\Psi(x,0)\,dx
-\end{align*}
+\end{align}
 \subsection*{\underline{Particle on a Ring:}}
-\begin{align*}
+\begin{align}
     &\psi_\pm(\theta)=\frac{1}{\sqrt{2\pi}}\exp{\pm i\frac{R\theta}{\hbar}\sqrt{2mE}}=\frac{1}{\sqrt{2\pi}}e^{\pm ikx}
     &
     &x=R\theta; L=2\pi R; k=\frac{2\pi n}{L}=\frac{n}{R}
@@ -135,9 +135,9 @@ Where $\Delta Q$ is the uncertainity for the Hermitian Operator Q.
     &\psi(\theta)=\frac{1}{\sqrt{2\pi}}\exp{\pm in\theta}
     &
     &E_n=\frac{n^2\hbar^2}{2mR^2},\quad n=0\pm 1,\pm 2,\pm 3,...
-\end{align*}
+\end{align}
 \subsection*{\underline{Harmonic Oscillator:}}
-\begin{align*}
+\begin{align}
     &V(x)=\frac{1}{2}kx^2=\frac{1}{2}m(\omega x)^2\quad \left( \omega\equiv\sqrt{k/m} \right)
     &
     &E_n=\hbar\omega\left( n+\frac{1}{2} \right);n=0,1,2,\dots
@@ -169,30 +169,30 @@ Where $\Delta Q$ is the uncertainity for the Hermitian Operator Q.
     &\xi\equiv\sqrt{\frac{m\omega}{\hbar}}x
     &
     &\mathcal{H}_n(\xi)=(-1)^ne^{\xi^2}\left( \frac{d}{d\xi} \right)^ne^{-\xi^2}
-\end{align*}
-\begin{equation*}
+\end{align}
+\begin{equation}
     \psi_n(x)=\left( \frac{m\omega}{\pi\hbar} \right)^{1/4}\frac{1}{\sqrt{2^n n!}}\mathcal{H}_n(\xi)e^{-\xi^2/2}
-\end{equation*}
+\end{equation}
 \subsection*{\underline{Models of Dirac Delta Distribution $\delta(x)$:}}
-\begin{equation*}
+\begin{equation}
     (1)\ \lim_{\alpha\rightarrow\infty}\frac{\sin(\alpha x)}{\pi x}\\
     \qquad
     (2)\ \lim_{\epsilon\rightarrow0^+}\frac{1}{2\pi}\int_{-\infty}^{\infty}e^{-ikx}e^{-\epsilon |k|}\,dk=\lim_{\epsilon\rightarrow0^+}\frac{\epsilon}{\pi (x^2+\epsilon^2)}\\
     \qquad
     (3)\ \lim_{\epsilon\rightarrow0}\frac{\Theta(x+\epsilon)-\Theta(\epsilon)}{\epsilon}
-\end{equation*}
+\end{equation}
 where $\Theta(x)$ is Heaviside or step function. 
 \subsection*{\underline{Bound State:}}
-\begin{align*}
+\begin{align}
     &V=-\alpha\delta(x), \ \alpha>0
     &
     &\psi(x)=\sqrt{\frac{m\alpha}{\hbar^2}}\ e^{\frac{m\alpha}{\hbar^2}|\alpha|}
-\end{align*}
-\begin{equation*}
+\end{align}
+\begin{equation}
     E=-\frac{m\alpha^2}{2\hbar^2}
-\end{equation*}
+\end{equation}
 \subsection*{\underline{Scattering State:}}
-\begin{align*}
+\begin{align}
     &V(x)=\left\{
         \begin{matrix}
             Ae^{ikx}+Be^{-ikx}, x<0\\
@@ -205,9 +205,9 @@ where $\Theta(x)$ is Heaviside or step function.
     &T=\frac{|F|^2}{|A|^2}=\frac{1}{1+\beta^2}
     &
     &R=\frac{|B|^2}{|A|^2}=\frac{\beta}{1+\beta}
-\end{align*}
+\end{align}
 \subsection*{\underline{Miscellaneous:}}
-\begin{align*}
+\begin{align}
     \int_{-\infty}^\infty e^{-ax^2}\, dx=\sqrt{\frac{\pi}{a}}
     &&
     \int_{-\infty}^\infty e^{-(ax^2+bx)}\,dx=e^{b^2/4a}\sqrt{\frac{\pi}{a}}
@@ -218,7 +218,7 @@ where $\Theta(x)$ is Heaviside or step function.
             0,\quad i\neq j
         \end{matrix}
     \right.
-\end{align*}
+\end{align}
 \subsection*{\underline{Matrix Algebra:}}
 Let A be a 2X2 matrix defined as:
      $A=\left(
@@ -227,7 +227,7 @@ Let A be a 2X2 matrix defined as:
             c     &d
         \end{matrix}
     \right)$ then:
-\begin{align*}
+\begin{align}
     &A^{-1}=\frac{1}{|A|}\left(
         \begin{matrix}
             d     &-b\\
@@ -235,5 +235,5 @@ Let A be a 2X2 matrix defined as:
         \end{matrix}
     \right);
     &&|A| = ad-bc
-\end{align*}
+\end{align}
 \end{document}

@@ -43,17 +43,17 @@
 \subsection*{\underline{Blackbody Radiation:}}
 Plank energy spectral density: \resizebox{.4\hsize}{!}{$\rho(\nu)=\frac{8\pi h \nu^3}{c^3}\left[ \frac{1}{\exp \left(\frac{h\nu}{k_BT} \right)-1} \right]$}
 \vspace{0.3cm}
-\hrule
+%\hrule
 \subsection*{\underline{Photoelectric Effect:}}
 $W$ is the work function of irradiated metal. $V_s$ is the stopping potential.
 $$K=\sfrac{1}{2}\ mv^2=h\nu-W=\frac{hc}{\lambda}-W\ ;\quad K=\sfrac{1}{2}\ mv^2=|e|V_s\leftrightarrow V_s=\frac{K}{|e|}$$
 $$\nu\geq\frac{W}{h}=\nu_{\min};\quad \nu=\frac{1}{T}=\frac{c}{\lambda};\quad \nu=\frac{\omega}{2\pi}$$
 % \vspace{0.3cm}
-\hrule
+%\hrule
 \subsection*{\underline{de Broglie Formula:}}
 $$\lambda=\frac{h}{p}=\frac{h}{mv}$$
 \vspace{0.3cm}
-\hrule
+%\hrule
 \subsection*{\underline{Bohr Hydrogen-like Atom:}}
 \begin{align*}
     &E_n=-\frac{Z^2}{n^2}R&\ &\quad R=13.6\,\unit{\electronvolt}\\
@@ -257,4 +257,38 @@ Let A be a 2X2 matrix defined as:
     \right);
     &&|A| = ad-bc
 \end{align}
+\subsection*{\underline{Orbital Angular Momentum:}}
+\begin{gather}
+    \hat{L}_{x}=\hat{y} \hat{p}_{z}-\hat{z} \hat{p}_{y}, \quad \hat{L}_{y}=\hat{z} \hat{p}_{x}-\hat{x} \hat{p}_{z}, \quad \hat{L}_{z}=\hat{x} \hat{p}_{y}-\hat{y} \hat{p}_{x} \\
+    {\left[\hat{L}_{x}, \hat{L}_{y}\right]=i \hbar \hat{L}_{z}, \quad\left[\hat{L}_{y}, \hat{L}_{z}\right]=i \hbar \hat{L}_{x}, \quad\left[\hat{L}_{z}, \hat{L}_{x}\right]=i \hbar \hat{L}_{y} \cdot} \\
+    \hat{L}^{2} \equiv \hat{L}_{x} \hat{L}_{x}+\hat{L}_{y} \hat{L}_{y}+\hat{L}_{z} \hat{L}_{z}, \quad\left[\hat{L}^{2}, \hat{L}_{i}\right]=0 \\
+    \nabla^{2}=\frac{1}{r} \frac{\partial^{2}}{\partial r^{2}} r+\frac{1}{r^{2}}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
+    \hat{L}^{2}=-\hbar^{2}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
+    \hat{L}_{z}=\frac{\hbar}{i} \frac{\partial}{\partial \phi} ; \quad \hat{L}_{\pm}=\hbar e^{\pm i \phi}\left(\pm \frac{\partial}{\partial \theta}+i \cot \theta \frac{\partial}{\partial \phi}\right)
+\end{gather}
+\subsection*{\underline{Spherical Harmonics:}}
+\begin{gather}
+    Y_{\ell, m}(\theta, \phi) \equiv \mathcal{N}_{\ell, m} P_{\ell}^{m}(\cos \theta) e^{i m \phi}\\
+    \hat{L}_{z} Y_{\ell m}=\hbar m Y_{\ell m}\\
+    \hat{L}^{2} Y_{\ell m}=\hbar^{2} \ell(\ell+1) Y_{\ell m}\\
+    \int d \Omega Y_{\ell^{\prime} m^{\prime}}^{*}(\theta, \phi) Y_{\ell m}(\theta, \phi)=\delta_{\ell^{\prime}, \ell} \delta_{m^{\prime}, m}, \quad \int d \Omega=\int_{0}^{2 \pi} d \phi \int_{-1}^{1} d(\cos \theta)\\
+    Y_{0,0}(\theta, \phi)=\frac{1}{\sqrt{4 \pi}} ; \quad Y_{1, \pm 1}(\theta, \phi)=\mp \sqrt{\frac{3}{8 \pi}} \sin \theta \exp (\pm i \phi) ; \quad Y_{1,0}(\theta, \phi)=\sqrt{\frac{3}{4 \pi}} \cos \theta
+\end{gather}
+\subsection*{\underline{Central Potentials $V(\mathbf{r})=V(r)$:}}
+\begin{gather}
+    \psi(r, \theta, \phi)=\frac{u(r)}{r} Y_{\ell m}(\theta, \phi)\\
+    \left(-\frac{\hbar^{2}}{2 m} \frac{d^{2}}{d r^{2}}+V(r)+\frac{\hbar^{2} \ell(\ell+1)}{2 m r^{2}}\right) u(r)=E u(r)\\
+    u(r) \sim r^{\ell+1},\ \mathrm{as} r \rightarrow 0
+\end{gather}
+\subsection*{\underline{Hydrogen Atom:}}
+\begin{gather}
+    H=\frac{\mathbf{p}^{2}}{2 m}-\frac{Z e^{2}}{r} \\
+    E_{n}=-\frac{Z^{2} e^{2}}{2 a_{0}} \frac{1}{n^{2}}, \quad a_{0}=\frac{\hbar^{2}}{m e^{2}} \simeq 0.529 \times 10^{-10} \mathrm{~m}, \quad \frac{e^{2}}{2 a_{0}} \simeq 13.6 \mathrm{eV} \\
+    \psi_{n, \ell, m}(\vec{x})=A\left(\frac{r}{a_{0}}\right)^{\ell}\left(\text { Polynomial in } \frac{r}{a_{0}} \text { of degree } n-(\ell+1)\right) e^{-\frac{Z_{r}}{n a_{0}}} Y_{\ell, m}(\theta, \phi) \\
+    n=1,2, \ldots, \quad \ell=0,1, \ldots, n-1, \quad m=-\ell, \ldots, \ell \\
+    \psi_{n, \ell, m}(\vec{x})=\frac{u_{n \ell}(r)}{r} Y_{\ell, m}(\theta, \phi) \\
+    u_{1,0}(r)=\frac{2 r}{a_{0}^{3 / 2}} \exp \left(-r / a_{0}\right) \\
+    u_{2,0}(r)=\frac{2 r}{\left(2 a_{0}\right)^{3 / 2}}\left(1-\frac{r}{2 a_{0}}\right) \exp \left(-r / 2 a_{0}\right) \\
+    u_{2,1}(r)=\frac{1}{\sqrt{3}} \frac{1}{\left(2 a_{0}\right)^{3 / 2}} \frac{r^{2}}{a_{0}} \exp \left(-r / 2 a_{0}\right)
+\end{gather}
 \end{document}

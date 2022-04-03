@@ -293,7 +293,7 @@ Let A be a 2X2 matrix defined as:
     \hat{L}^{2} \equiv \hat{L}_{x} \hat{L}_{x}+\hat{L}_{y} \hat{L}_{y}+\hat{L}_{z} \hat{L}_{z}, \quad\left[\hat{L}^{2}, \hat{L}_{i}\right]=0 \\
     \nabla^{2}=\frac{1}{r} \frac{\partial^{2}}{\partial r^{2}} r+\frac{1}{r^{2}}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
     \hat{L}^{2}=-\hbar^{2}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
-    \hat{L}_{z}=\frac{\hbar}{i} \frac{\partial}{\partial \phi} ; \quad \hat{L}_{\pm}=\hbar e^{\pm i \phi}\left(\pm \frac{\partial}{\partial \theta}+i \cot \theta \frac{\partial}{\partial \phi}\right)
+    \hat{L}_{z}=\frac{\hbar}{i} \frac{\partial}{\partial \phi} ; \quad \hat{L}_{\pm}=\hbar e^{\pm i \phi}\left(\pm \frac{\partial}{\partial \theta}+i \cot \theta \frac{\partial}{\partial \phi}\right)=\hat{L}_{x}\pm i\hat{L}_{y}
 \end{gather}
 \subsection*{\underline{Spherical Harmonics:}}
 \begin{gather}
@@ -305,11 +305,17 @@ Let A be a 2X2 matrix defined as:
 \end{gather}
 \subsection*{\underline{Central Potentials $V(\mathbf{r})=V(r)$:}}
 \begin{gather}
+    \left[ \frac{-\hbar^2}{2m}\nabla^2+V(r) \right]\psi(r,\theta,\phi)=E\psi(r,\theta,\phi)\\
+    -\frac{\hbar^2}{2m}\left[ \frac{1}{r}\frac{\partial^2}{\partial r^2}r- \frac{L^2(\theta,\phi)}{\hbar^2r^2}+V(r)\right]\psi(r,\theta,\phi)=E\psi(r,\theta,\phi)\\
+    \psi(r, \theta, \phi)=R(r)Y_{l,m}*(\theta\phi)\\
     \psi(r, \theta, \phi)=\frac{u(r)}{r} Y_{\ell m}(\theta, \phi)\\
     \left(-\frac{\hbar^{2}}{2 m} \frac{d^{2}}{d r^{2}}+V(r)+\frac{\hbar^{2} \ell(\ell+1)}{2 m r^{2}}\right) u(r)=E u(r)\\
     u(r) \sim r^{\ell+1},\ \mathrm{as} r \rightarrow 0
+    \nabla^{2}=\frac{1}{r} \frac{\partial^{2}}{\partial r^{2}} r+\frac{1}{r^{2}}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
+    \hat{L}^{2}=-\hbar^{2}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
+    \hat{L}_{z}=\frac{\hbar}{i} \frac{\partial}{\partial \phi} ; \quad \hat{L}_{\pm}=\hbar e^{\pm i \phi}\left(\pm \frac{\partial}{\partial \theta}+i \cot \theta \frac{\partial}{\partial \phi}\right)=\hat{L}_{x}\pm i\hat{L}_{y}\\
 \end{gather}
-\subsection*{\underline{Hydrogen Atom:}}
+\subsection*{\underline{Hydrogen Atom (Z=1):}}
 \begin{gather}
     H=\frac{\mathbf{p}^{2}}{2 m}-\frac{Z e^{2}}{r} \\
     E_{n}=-\frac{Z^{2} e^{2}}{2 a_{0}} \frac{1}{n^{2}}, \quad a_{0}=\frac{\hbar^{2}}{m e^{2}} \simeq 0.529 \times 10^{-10} \mathrm{~m}, \quad \frac{e^{2}}{2 a_{0}} \simeq 13.6 \mathrm{eV} \\

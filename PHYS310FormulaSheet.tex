@@ -291,6 +291,10 @@ Let A be a 2X2 matrix defined as:
     \hat{L}_{x}=\hat{y} \hat{p}_{z}-\hat{z} \hat{p}_{y}, \quad \hat{L}_{y}=\hat{z} \hat{p}_{x}-\hat{x} \hat{p}_{z}, \quad \hat{L}_{z}=\hat{x} \hat{p}_{y}-\hat{y} \hat{p}_{x} \\
     {\left[\hat{L}_{x}, \hat{L}_{y}\right]=i \hbar \hat{L}_{z}, \quad\left[\hat{L}_{y}, \hat{L}_{z}\right]=i \hbar \hat{L}_{x}, \quad\left[\hat{L}_{z}, \hat{L}_{x}\right]=i \hbar \hat{L}_{y} \cdot} \\
     \hat{L}^{2} \equiv \hat{L}_{x} \hat{L}_{x}+\hat{L}_{y} \hat{L}_{y}+\hat{L}_{z} \hat{L}_{z}, \quad\left[\hat{L}^{2}, \hat{L}_{i}\right]=0 \\
+    \nabla=\hat{r}\frac{\partial}{\partial r}+\hat{\theta}\frac{1}{r}\frac{\partial}{\partial \theta}+\hat{\phi}\frac{1}{r\sin\theta}\frac{\partial}{\partial \phi}\\
+    \nabla^{2}=\frac{1}{r^2} \frac{\partial}{\partial r}\left( r^2\frac{\partial}{\partial r} \right)
+    +\frac{1}{r^{2}\sin\theta}\frac{\partial}{\partial \theta}\left( \sin\theta\frac{\partial}{\partial\theta} \right)
+    +\frac{1}{r^{2}\sin^2\theta} \left( \frac{\partial^{2}}{\partial \phi^{2}} \right)\\
     \nabla^{2}=\frac{1}{r} \frac{\partial^{2}}{\partial r^{2}} r+\frac{1}{r^{2}}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
     \hat{L}^{2}=-\hbar^{2}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
     \hat{L}_{z}=\frac{\hbar}{i} \frac{\partial}{\partial \phi} ; \quad \hat{L}_{\pm}=\hbar e^{\pm i \phi}\left(\pm \frac{\partial}{\partial \theta}+i \cot \theta \frac{\partial}{\partial \phi}\right)=\hat{L}_{x}\pm i\hat{L}_{y}
@@ -310,7 +314,7 @@ Let A be a 2X2 matrix defined as:
     \psi(r, \theta, \phi)=R(r)Y_{l,m}*(\theta\phi)\\
     \psi(r, \theta, \phi)=\frac{u(r)}{r} Y_{\ell m}(\theta, \phi)\\
     \left(-\frac{\hbar^{2}}{2 m} \frac{d^{2}}{d r^{2}}+V(r)+\frac{\hbar^{2} \ell(\ell+1)}{2 m r^{2}}\right) u(r)=E u(r)\\
-    u(r) \sim r^{\ell+1},\ \mathrm{as} r \rightarrow 0
+    u(r) \sim r^{\ell+1},\ \mathrm{as} r \rightarrow 0\\
     \nabla^{2}=\frac{1}{r} \frac{\partial^{2}}{\partial r^{2}} r+\frac{1}{r^{2}}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
     \hat{L}^{2}=-\hbar^{2}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
     \hat{L}_{z}=\frac{\hbar}{i} \frac{\partial}{\partial \phi} ; \quad \hat{L}_{\pm}=\hbar e^{\pm i \phi}\left(\pm \frac{\partial}{\partial \theta}+i \cot \theta \frac{\partial}{\partial \phi}\right)=\hat{L}_{x}\pm i\hat{L}_{y}\\
@@ -326,4 +330,19 @@ Let A be a 2X2 matrix defined as:
     u_{2,0}(r)=\frac{2 r}{\left(2 a_{0}\right)^{3 / 2}}\left(1-\frac{r}{2 a_{0}}\right) \exp \left(-r / 2 a_{0}\right) \\
     u_{2,1}(r)=\frac{1}{\sqrt{3}} \frac{1}{\left(2 a_{0}\right)^{3 / 2}} \frac{r^{2}}{a_{0}} \exp \left(-r / 2 a_{0}\right)
 \end{gather}
+\subsection*{\underline{Spherical Coordinates:}}
+$$
+\begin{aligned}
+&\hat{\mathbf{r}}=\sin \theta \cos \phi \hat{\mathbf{x}}+\sin \theta \sin \phi \hat{\mathbf{y}}+\cos \theta \hat{\mathbf{z}} \\
+&\hat{\boldsymbol{\theta}}=\cos \theta \cos \phi \hat{\mathbf{x}}+\cos \theta \sin \phi \hat{\mathbf{y}}-\sin \theta \hat{\mathbf{z}} \\
+&\hat{\boldsymbol{\phi}}=-\sin \phi \hat{\mathbf{x}}+\cos \phi \hat{\mathbf{y}}
+\end{aligned}
+$$
+$$
+\begin{aligned}
+&\hat{\mathbf{x}}=\sin \theta \cos \phi \hat{\mathbf{r}}+\cos \theta \cos \phi \hat{\boldsymbol{\theta}}-\sin \phi \hat{\boldsymbol{\phi}} \\
+&\hat{\mathbf{y}}=\sin \theta \sin \phi \hat{\mathbf{r}}+\cos \theta \sin \phi \hat{\boldsymbol{\theta}}+\cos \phi \hat{\boldsymbol{\phi}} \\
+&\hat{\mathbf{z}}=\cos \theta \hat{\mathbf{r}}-\sin \theta \hat{\boldsymbol{\theta}}
+\end{aligned}
+$$
 \end{document}

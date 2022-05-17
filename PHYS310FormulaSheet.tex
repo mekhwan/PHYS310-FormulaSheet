@@ -412,7 +412,7 @@ $$
     \hat{L}^{2}=-\hbar^{2}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
     \hat{L}_{z}=\frac{\hbar}{i} \frac{\partial}{\partial \phi} ; \quad \hat{L}_{\pm}=\hbar e^{\pm i \phi}\left(\pm \frac{\partial}{\partial \theta}+i \cot \theta \frac{\partial}{\partial \phi}\right)
 \end{gather}
-\subsection*{\underline{General Momentum Operator}}
+\subsection*{\underline{General Momentum Operator:}}
 \begin{flalign}
     &\left[J_x, J_y\right]=i\hbar J_z
     &&\left[J_z, J_x\right]=i\hbar J_y
@@ -433,7 +433,7 @@ $J=1\implies 2J+1=3 \implies 3\times3 matrices.$
 so that $J_\pm$ are off diagonal matrices.\\
 We oreder the eigenvectors for a fixed J-value as the following:\\
 $\ket{j,j}\quad\ket{j,j-1}\quad\ket{j,j-2}\quad \dots \quad\ket{j,-j}$
-\subsection*{\underline{Spin Angular Momentum Operator}}
+\subsection*{\underline{Spin Angular Momentum Operator:}}
 For $j=\frac{1}{2}\implies \ket{\frac{1}{2},\frac{1}{2}}; \ket{\frac{1}{2},-\frac{1}{2}} then:$
 \begin{flalign}
     &S_x=\frac{\hbar}{2}\left(
@@ -470,4 +470,30 @@ For $j=\frac{1}{2}\implies \ket{\frac{1}{2},\frac{1}{2}}; \ket{\frac{1}{2},-\fra
             2     &0
         \end{matrix}\right)
 \end{flalign}
+\subsection*{\underline{Identical Particles:}}
+Particles that share the same intrinsic properties: mass, charge, spin, magnetic moment, \dots etc. Identical particles are indistinguishable
+\begin{equation}
+\Psi(1, 2, \dots, i, \dots, j, \dots, N)=\pm\Psi(1, 2, \dots, j, \dots, i, \dots, N)
+\end{equation}
+are either symmetric for Bosons (integer spin particles) or antisymmetric for Fermions (half integer spin particles) under exchange of any two particles.\\
+$\implies$ Pauli Exclusion Principle: Two identical Fermions cannot occupy the same quantum state.
+\begin{equation}
+\Psi_{Fermions}(R_1,R_2,\dots,R_N)= \frac{1}{\sqrt{N!}}
+\left(\begin{matrix}
+\Psi_1(1)	&\Psi_2(1)		&\dots 	&\Psi_N(1)\\
+\Psi_1(2)	&\Psi_2(2)		&\dots 	&\Psi_N(2)\\
+\vdots 	&\vdots 		&\vdots 	&\vdots\\
+\Psi_1(N)	&\Psi_2(N)		&\dots 	&\Psi_N(N)
+\end{matrix}\right)
+\end{equation}
+For Bosons use the same Slater-determinant by replacing all signs be + .
+Spin $\frac{1}{2}$ particles can be in any of the following states:
+\begin{enumerate}
+\item[] \underline{Singlet State:} \begin{equation} \chi_s(s1,s2)=\frac{1}{\sqrt{2}}(\chi_{\uparrow}(s1)\chi_{\downarrow}(s2)-\chi_{\downarrow}(s1)\chi_{\uparrow}(s2)) \end{equation} with total spin s=0.
+\item[] \underline{Triplet States:} with total spin 1, 0, -1: \begin{align}
+&\chi_{1,1}(s1,s2)=\chi_{\uparrow}(s1)\chi_{\uparrow}(s2)) &\\
+&\chi_{-1,-1}(s1,s2)=\chi_{\downarrow}(s1)\chi_{\downarrow}(s2) &\\
+&\chi_{1,0}(s1,s2)=\frac{1}{\sqrt{2}}(\chi_{\uparrow}(s1)\chi_{\downarrow}(s2)+\chi_{\downarrow}(s1)\chi_{\uparrow}(s2))
+\end{align}
+\end{enumerate}  
 \end{document}

@@ -58,7 +58,7 @@ $1 \mathrm{fm}=10^{-15} \mathrm{~m}$, $1 \mathrm{fm}=10^{-15} \mathrm{~m}, \quad
 \item The wave function and its first order space derivative is continuous all over space and in particular at the boundaries of a finite potential.
 \item At boundaries with Dirac delta function potential, the first space derivative of the wavefunction is discontinuous. 
 \item Physical solution should be finite all over space, no blow ups, in particular at infinity.
-\item The number of nodes (zeros) of the eigenfunction increases by one unit as we move from the ground state (zero nodes) to higher excited states.
+\item The number of nodes (zeros) of the eigenfunction increases by one unit between adjacent states as we move from the ground state (zero nodes) to higher excited states.
 \item Bound states exist only for confining potential (classically between turning points of the potential).
 \end{enumerate}
 \subsection*{\underline{The Origin of Quantum Physics:}}
@@ -66,7 +66,7 @@ $1 \mathrm{fm}=10^{-15} \mathrm{~m}$, $1 \mathrm{fm}=10^{-15} \mathrm{~m}, \quad
     &E=h\omega
     &p=\frac{h}{\lambda}=\hbar k
     &\\
-    &\lambda=\frac{h}{p}
+    &\lambda=\frac{h}{p} = \frac{2\pi}{k}
     &\lambda_C = \frac{h}{mc}
 \end{align}
 \subsection*{\underline{Blackbody Radiation:}}
@@ -131,13 +131,17 @@ Hermitian conjugate $A^\dagger$ is defined by: $\int(A\psi(x))^*\psi(x),dx=\int\
 \end{equation}
 \subsection*{\underline{Complete Basis Set:}}
 Given that $H\psi_n(x)=E_n\psi_n(x);\quad \int\phi^*_n(x)\phi_m(x)dx=\delta_{nm}$, where $\{\phi_n\}$ is a complete set, then:
-\begin{align}
-    \psi(x)&=\sum_nc_n\phi_n(x);\quad C_n=\int\psi^*_n(x)\psi(x)\,dx\\
-    \int\psi^*(x)\psi(x)dx&=\sum_n|c_n|^2=1\\
-    E&=\int\psi^*_n(x)H\psi_m(x)dx=\sum_n|c_n|^2E_n\\
-    \Psi(x,0)&=\psi(x)=\sum_nc_n\phi_n(x)\implies\Psi(x,t)=\sum_nc_ne^{-iE_nt/\hbar}\phi_n(x)\\
-    c_n&=\int\phi_n^*\Psi(x,0)dx
-\end{align}
+\begin{gather}
+    \psi(x)=\sum_nc_n\phi_n(x);\quad c_n=\int\psi^*_n(x)\psi(x)\,dx\\
+    \int\psi^*(x)\psi(x)dx=\sum_n|c_n|^2=1\\
+    E=\int\psi^*_n(x)H\psi_m(x)dx=\sum_n|c_n|^2E_n\\
+    \Psi(x,0)=\psi(x)=\sum_nc_n\phi_n(x)\implies\Psi(x,t)
+\begin{cases}
+\sum_nc_ne^{-iE_nt/\hbar}\phi_n(x)\\
+e^{i\hat H t/\hbar}\Psi(x,0)\\
+\end{cases}
+  \\ c_n=\int\phi_n^*\Psi(x,0)dx
+\end{gather}
 \subsection*{\underline{Commutator Properties:}}
 \begin{equation}
 [A,A]=0;\quad
@@ -322,7 +326,7 @@ $J=1\implies 2J+1=3 \implies 3\times3\text{ matrices}.$
 \end{flalign}
 so that $J_\pm$ are off diagonal matrices.\\
 We oreder the eigenvectors for a fixed J-value as the following:\\
-$\ket{j,j}\quad\ket{j,j-1}\quad\ket{j,j-2}\quad \dots \quad\ket{j,-j}$\\
+$\ket{J,J}\quad\ket{J,J-1}\quad\ket{J,J-2}\quad \dots \quad\ket{J,-J}$\\
 For a fixed J here is the expectation of operator A:
 \begin{equation}
 A = 
@@ -335,23 +339,23 @@ A =
 \end{equation}
 in the above matrix, for a fixed J we denote $\ket{J m}=\ket m$.
 \subsection*{\underline{Spin Angular Momentum Operator}}
-For $j=\frac{1}{2}\implies \ket{\frac{1}{2},\frac{1}{2}}; \ket{\frac{1}{2},-\frac{1}{2}} then:$
+For $j=\frac{1}{2}\implies \ket{\uparrow} = \ket{\frac{1}{2},\frac{1}{2}}; \ket{\downarrow} = \ket{\frac{1}{2},-\frac{1}{2}} then:$
 \begin{flalign}
     &S_x=\frac{\hbar}{2}\left(
         \begin{matrix}
             0     &1\\
             1     &0
-        \end{matrix}\right)
+        \end{matrix}\right) = \frac{\hbar}{2}\sigma_1
     &&S_y=\frac{\hbar}{2}\left(
         \begin{matrix}
             0     &-i\\
             i     &0
-        \end{matrix}\right)
+        \end{matrix}\right) = \frac{\hbar}{2}\sigma_2
     &&S_z=\frac{\hbar}{2}\left(
         \begin{matrix}
             1     &0\\
             0     &-1
-        \end{matrix}\right)
+        \end{matrix}\right) = \frac{\hbar}{2}\sigma_3
     &\\
     &\left[S_x, S_y\right]=i\hbar S_z
     &&\left[S_z, S_x\right]=i\hbar S_y
@@ -430,25 +434,28 @@ $\implies$ Pauli Exclusion Principle: Two identical Fermions cannot occupy the s
 \begin{equation}
 \Psi_{Fermions}(R_1,R_2,\dots,R_N)= \frac{1}{\sqrt{N!}}
 \left(\begin{matrix}
-\Psi_1(1)	&\Psi_2(1)		&\dots 	&\Psi_N(1)\\
-\Psi_1(2)	&\Psi_2(2)		&\dots 	&\Psi_N(2)\\
+\Psi_1(R_1)	&\Psi_2(R_1)		&\dots 	&\Psi_N(R_1)\\
+\Psi_1(R_2)	&\Psi_2(R_2)		&\dots 	&\Psi_N(R_2)\\
 \vdots 	&\vdots 		&\vdots 	&\vdots\\
-\Psi_1(N)	&\Psi_2(N)		&\dots 	&\Psi_N(N)
+\Psi_1(R_N)	&\Psi_2(R_N)		&\dots 	&\Psi_N(R_N)
 \end{matrix}\right)
 \end{equation}
 For Bosons use the same Slater-determinant by replacing all signs be + .
 Spin $\frac{1}{2}$ particles can be in any of the following states:
 \begin{enumerate}
-\item[] \underline{Singlet State:} \begin{equation} \chi_s(s1,s2)=\frac{1}{\sqrt{2}}(\chi_{\uparrow}(s1)\chi_{\downarrow}(s2)-\chi_{\downarrow}(s1)\chi_{\uparrow}(s2)) \end{equation} with total spin s=0.
-\item[] \underline{Triplet States:} with total spin 1, 0, -1:
-\begin{align}
-&\chi_{1,1}(s1,s2)=\chi_{\uparrow}(s1)\chi_{\uparrow}(s2)) &\\
-&\chi_{-1,-1}(s1,s2)=\chi_{\downarrow}(s1)\chi_{\downarrow}(s2) &\\
-&\chi_{1,0}(s1,s2)=\frac{1}{\sqrt{2}}(\chi_{\uparrow}(s1)\chi_{\downarrow}(s2)+\chi_{\downarrow}(s1)\chi_{\uparrow}(s2))
-\end{align}
+\item[] \underline{Singlet State (Antisymmetric state):} \begin{equation} \chi_s(s1,s2)=\frac{1}{\sqrt{2}}(\chi_{\uparrow}(s1)\chi_{\downarrow}(s2)-\chi_{\downarrow}(s1)\chi_{\uparrow}(s2)) \end{equation} with total spin s=0.
+\item[] \underline{Triplet States (Symmetric state):} with total spin $S_z=$1, 0, -1:
+\begin{gather}
+\chi_T(s_1, s_2) 
+\begin{cases}
+\chi_{1,1}(s_1,s_2)=\chi_{\uparrow}(s_1)\chi_{\uparrow}(s_2)) \\
+\chi_{-1,-1}(s_1,s_2)=\chi_{\downarrow}(s_1)\chi_{\downarrow}(s_2) \\
+\chi_{1,0}(s_1,s_2)=\frac{1}{\sqrt{2}}(\chi_{\uparrow}(s_1)\chi_{\downarrow}(s_2)+\chi_{\downarrow}(s_1)\chi_{\uparrow}(s_2))
+\end{cases}
+\end{gather}
 \end{enumerate}
 \subsection*{\underline{Electron Gas in Volume V:}}
-Each eigenvalue in k-space occupy a volume $\frac{{(2\pi)^3}}{V}$ so that:
+Each eigenvalue in k-space occupy a volume $\frac{{(2\pi)^3}}{V}$ so that 2 for spin states:
 \begin{equation} \sum_k f(k)=2\frac{V}{(2\pi)^3}\int d^3k f(k) \end{equation}
 Highest occupied wave vector is called Fermi wave vector k$_F$ 
 \begin{equation} k_F = (3\pi^2n)^{1/3}; \, n=\frac{N}{V} \,\, \text{Electronic Density}\end{equation}
@@ -461,15 +468,15 @@ Highest occupied wave vector is called Fermi wave vector k$_F$
 &2\frac{\Omega_k}{\frac{(2\pi)^3}{V}}=N=2\frac{\frac{4}{3}\pi k_F^3}{\frac{(2\pi)^3}{V}}
 & k_F = (3\pi^2n)^{1/3}
 &\\
-&n=\frac{N}{V}=\frac{1}{v}=\frac{1}{\frac{4}{3}\pi R_s^3}
-&R_s=\left(\frac{3}{4\pi n}\right)^{1/3}
+&n=\frac{N}{V}=\frac{1}{v}=\frac{1}{\frac{4}{3}\pi r_s^3}
+&r_s=\left(\frac{3}{4\pi n}\right)^{1/3}
 &\\
-& k_F = (3\pi^2n)^{1/3} = \frac{(9\pi /4)^{1/3}}{R_s}=\frac{1.92}{R_s}
+& k_F = (3\pi^2n)^{1/3} = \frac{(9\pi /4)^{1/3}}{r_s}=\frac{1.92}{r_s}
 \end{align}
 \subsection*{\underline{Bloch Theorem in Solids:}}
 \begin{gather}
 \psi (R+x)=e^{i k\cdot R} \psi (x)\\
-\text{\underline{In $1D$:}}\quad k_i = \frac{2\pi n_i}{L}; \quad i=x, y, z;\quad n=0, \pm1, \pm 2, ... \Rightarrow dn = \frac{V}{(2\pi)^3} dk^3\\
+\text{\underline{In $3D$:}}\quad k_i = \frac{2\pi n_i}{L}; \quad i=x, y, z;\quad n=0, \pm1, \pm 2, ... \Rightarrow dn = \frac{V}{(2\pi)^3} dk^3\\
 \sum_{k\sigma}F(k, \sigma)= \frac{V}{(2\pi)^3} \sum_\sigma \int_{}  d k^3 F(k, \sigma)
 \end{gather}
 \end{document}

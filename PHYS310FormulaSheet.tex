@@ -16,6 +16,7 @@
 
 \begin{document}
 \begin{center}\textbf{\underline{\huge{Formula Sheet}}}\end{center}
+
 \subsection*{\underline{Physical Constants:}}
 \begin{tabular}{lll}
 \hline Quantity & Symbol, equation & Value \\
@@ -44,23 +45,27 @@ Permittivity of free space & $\epsilon_{0}=1 / \mu_{0} c^{2}$ & $8.854 \times 10
 Permeability of free space & $\mu_{0}$ & $4 \pi \times 10^{-7} \mathrm{~N} \mathrm{~A}^{-2}$ \\
 \hline & &
 \end{tabular}
+
 \subsection*{\underline{Conversion of units:}}
 $1 \mathrm{fm}=10^{-15} \mathrm{~m}$, $1 \mathrm{fm}=10^{-15} \mathrm{~m}, \quad 1$ barn $=10^{-28} \mathrm{~m}^{2}=100 \mathrm{fm}^{2}$, 1 atmosphere $=101325 \mathrm{~Pa}, \quad$ Thermal energy at $T=300 \mathrm{~K}: \quad k T=[38.682]^{-1} \mathrm{eV}$ $0^{\circ} \mathrm{C}=273.15 \mathrm{~K}, \quad 1 \mathrm{eV}=1.602 \times 10^{-19} \mathrm{~J}, \quad 1 \mathrm{eV} / \mathrm{c}^{2}=1.783 \times 10^{-36} \mathrm{~kg}$
+
 \subsection*{\underline{Properties of the Solution of 1D stationary Schrodinger Equation:}}
 \begin{enumerate}
 \item For 1D potential, all stationary solutions are non-degenerate.
-\item Stationary square integrable solution exist only for $E > min{V(x)}$ 
+\item Stationary square integrable solution exist only for $E > min{(V(x))}$ 
 \item If V(x) is real, then $\Psi$(x) can be taken to be real.
 \item Eigenvalues of a Hermitian Hamiltonian are all real.
 \item The eigenfunctions of a Hermitian operator form a complete orthogonal basis set, for smooth potentials.
 \item 1D Schrodinger equation Solution is real up to an over all phase.
 \item For a given 1D even potential the stationary states are either even or odd.
-\item The wave function and its first order space derivative is continuous all over space and in particular at the boundaries of a finite potential.
-\item At boundaries with Dirac delta function potential, the first space derivative of the wavefunction is discontinuous. 
-\item Physical solution should be finite all over space, no blow ups, in particular at infinity.
+\item The wave function and its first order space derivative are continuous all over space and in particular at the boundaries of a finite potential.
+\item At boundaries with Dirac delta function potential,
+    the wave function is still continuos but the first space derivative of the wavefunction is discontinuous. 
+\item ? to square integrability physical solution should be finite all over space, no blow ups, in particular at infinity.
 \item The number of nodes (zeros) of the eigenfunction increases by one unit between adjacent states as we move from the ground state (zero nodes) to higher excited states.
 \item Bound states exist only for confining potential (classically between turning points of the potential).
 \end{enumerate}
+
 \subsection*{\underline{The Origin of Quantum Physics:}}
 \begin{align}
     &E=h\omega
@@ -69,26 +74,31 @@ $1 \mathrm{fm}=10^{-15} \mathrm{~m}$, $1 \mathrm{fm}=10^{-15} \mathrm{~m}, \quad
     &\lambda=\frac{h}{p} = \frac{2\pi}{k}
     &\lambda_C = \frac{h}{mc}
 \end{align}
+
 \subsection*{\underline{Blackbody Radiation:}}
 Plank energy spectral density: \resizebox{.4\hsize}{!}{$\rho(\nu)=\frac{8\pi h \nu^3}{c^3}\left[ \frac{1}{\exp \left(\frac{h\nu}{k_BT} \right)-1} \right]$}
 \vspace{0.3cm}
 %\hrule
+
 \subsection*{\underline{Photoelectric Effect:}}
 $W$ is the work function of irradiated metal. $V_s$ is the stopping potential.
 $$K=\sfrac{1}{2}\ mv^2=h\nu-W=\frac{hc}{\lambda}-W\ ;\quad K=\sfrac{1}{2}\ mv^2=|e|V_s\leftrightarrow V_s=\frac{K}{|e|}$$
 $$\nu\geq\frac{W}{h}=\nu_{\min};\quad \nu=\frac{1}{T}=\frac{c}{\lambda};\quad \nu=\frac{\omega}{2\pi}$$
 % \vspace{0.3cm}
 %\hrule
+
 \subsection*{\underline{de Broglie Formula:}}
 $$\lambda=\frac{h}{p}=\frac{h}{mv}$$
 \vspace{0.3cm}
 %\hrule
+
 \subsection*{\underline{Bohr Hydrogen-like Atom:}}
 \begin{align*}
-    &E_n=-\frac{Z^2}{n^2}R&\ &\quad R=13.6\,\unit{\electronvolt}\\
-    &r_n=\frac{a_0}{Z}n^2&\ &\quad a_0=0.53\times10^{-10}\,\unit{\metre}\\
+    &E_n=-\frac{Z^2}{n^2}R&\ &\quad R=13.6\,\si{\electronvolt}\\
+    &r_n=\frac{a_0}{Z}n^2&\ &\quad a_0=0.53\times10^{-10}\,\si{\metre}\\
     &h\nu=E_n-E_m=Z^2R\left( \frac{1}{m^2}-\frac{1}{n^2} \right)&\ &\quad n>m
 \end{align*}
+
 \subsection*{\underline{The Wave Function:}}
 $\Psi(x,t)$ obeys Schrodinger's equation, and the normalization condition $\int_{-\infty}^\infty |\Psi(x,t)|^2dx=1$:
 \begin{equation}
@@ -111,24 +121,26 @@ $\Psi(x,t)$ obeys Schrodinger's equation, and the normalization condition $\int_
 \end{flalign}
 % A Hermitian operator $Q$ obey: $\int\psi^*(x)Q\psi(x)\,dx=\int(Q\psi(x))^*\psi(x)\,dx$, and $Q^\dagger = Q$.\\
 Hermitian conjugate $A^\dagger$ is defined by: $\int(A\psi(x))^*\psi(x),dx=\int\psi(x)A^\dagger\psi(x),dx$.
-\subsection*{\underline{Fourier Transform}}
+$$ H = - \frac{\hbar^2}{2m} \frac{d}{dx^2} + V(x) $$
+
+\subsection*{\underline{Fourier Transform \& Wavepackets}}
 \begin{flalign}
     &\Psi(x)=\frac{1}{\sqrt{2\pi}}\int dk\Phi(k)e^{ikx},
     &&\Phi(k)=\frac{1}{\sqrt{2\pi}}\int dx\Psi(x)e^{-ikx}
-    &&\int dx|\Psi(x)|^2 = \int dk|\Phi(k)|^2
+    &&\int dx|\Psi(x)|^2 = \int dk|\Phi(k)|^2 = 1
     &\\
     &\Psi(x)=\frac{1}{(2\pi)^\frac{3}{2}}\int d^3k\Phi(\textbf{k})e^{i\textbf{k}\cdot \textbf{x}},
     &&\Phi(k)=\frac{1}{(2\pi)^\frac{3}{2}}\int d^3x\Psi(\textbf{x})e^{-i\textbf{k}\cdot \textbf{x}}
-    &&\int d^x|\Psi(\textbf{x})|^2 = \int d^k|\Phi(\textbf{k})|^2
+    &&\int d^x|\Psi(\textbf{x})|^2 = \int d^k|\Phi(\textbf{k})|^2 = 1
     &\\
     &\frac{1}{2\pi} \int_{-\infty}^\infty e^{ikx}dx = \delta(k)
     &&\frac{1}{(2\pi)^3} \int_{-\infty}^\infty e^{i\textbf{k}\cdot \textbf{x}}d^3x = \delta^{(3)}(k)
     &&\Psi(x,t)=\frac{1}{(2\pi)^3}\int\phi(k)e^{i(\mathbf{k}\cdot\mathbf{x}-\omega(\mathbf{k})t)}\,dk^3
 \end{flalign}
-\subsection*{\underline{Wavepackets}}
 \begin{equation}
     v_{group} =\frac{d\omega}{dk};\  \Delta k\Delta x \simeq 1
 \end{equation}
+
 \subsection*{\underline{Complete Basis Set:}}
 Given that $H\psi_n(x)=E_n\psi_n(x);\quad \int\phi^*_n(x)\phi_m(x)dx=\delta_{nm}$, where $\{\phi_n\}$ is a complete set, then:
 \begin{gather}
@@ -142,6 +154,7 @@ Given that $H\psi_n(x)=E_n\psi_n(x);\quad \int\phi^*_n(x)\phi_m(x)dx=\delta_{nm}
 \end{cases}
   \\ c_n=\int\phi_n^*\Psi(x,0)dx
 \end{gather}
+
 \subsection*{\underline{Commutator Properties:}}
 \begin{equation}
 [A,A]=0;\quad
@@ -155,27 +168,34 @@ Given that $H\psi_n(x)=E_n\psi_n(x);\quad \int\phi^*_n(x)\phi_m(x)dx=\delta_{nm}
 \begin{equation}
 [A,[B,C]]+[B,[C,A]]+[C,[A,B]]=0
 \end{equation}
+
+\newpage
 \subsection*{\underline{Uncertainty Principle:}}
 \begin{align}
     &(\Delta Q)^2 = \braket{Q^2} - \braket{Q}^2 = \braket{(Q-\braket{Q})^2}
     &\Delta x \Delta p \geq \frac{\hbar}{2}
 \end{align}
-Where $\Delta Q$ is the uncertainity for the Hermitian Operator Q.
+Where $\Delta Q$ is the uncertainty for the Hermitian Operator Q.
+\begin{align}
+    (\Delta{Q})^2 (\Delta{R})^2 \ge \frac{1}{2} \left| \langle [Q, R] \rangle \right| ^2
+\end{align}
+
 \subsection*{\underline{Operators:}}
 For the operator $\hat{A}$, $\hat{A}\psi=a\psi$. $a$ in an eigenvalue and $\psi$ is an eigenfunction of $A$. Then, the following properties hold:
 \begin{itemize}
     \item $\hat{A}^n\psi=a^n\psi,\quad \hat{A}^{-1}\psi=a^{-1}\psi,\quad e^{i\hat{A}}\psi=e^{ia}\psi,\quad F(\hat{A})\psi=F(a)\psi$
-    \item $\hat{A}^{\dagger}=A,\ \hat{A}\ket{\phi_n}=a_n\ket{\phi_n} \quad \implies a_n\in \mathbb{R}, \braket{\phi_m|\phi_n}=\delta_{mn}$
+    \item If $\hat{A}^{\dagger}=A,\ \hat{A}\ket{\phi_n}=a_n\ket{\phi_n} \quad \implies a_n\in \mathbb{R}, \braket{\phi_m|\phi_n}=\delta_{mn}$
     \item If $\{\phi_n\}$ is a complete and orthonormal for a Hermitian operator, then the operator is diagonal in the eigenbasis, $\{\phi_n\}$, with eigenvalues,, $\{a_n\}$, as the diagonal elements. The basis set is unique iff there are no degenerate eigenvalues.
     \item If two Hermitian operators, $\hat{A}$ and $\hat{B}$, commute and have no degenerate eigenvalues. Then each eigenvector of $\hat{A}$ is also an eigenvector of $\hat{B}$. A common orthonormal basis can be made of the joint eigenvectors of $\hat{A}$ and $\hat{B}$.
 \end{itemize}
+
 \subsection*{\underline{1D Infinite Square Well:}}
 \begin{align}
     &H\psi_n(x)=E_n\psi_n(x)
     &
     &\int\psi^*_n(x)\psi_n(x)dx=\delta_{n,m}
     \\
-    &\phi_n(x)=\sqrt{\frac{2}{a}}\sin\left( \frac{n\pi}{a}x \right)
+    &\phi_n(x)=\sqrt{\frac{2}{a}}\sin\left( \frac{n\pi}{a}x \right); \, n= 1, 2, \dots
     &
     &\phi_n(x,t)=\phi_n(x)e^{-iE_nt/\hbar}
     \\
@@ -187,9 +207,11 @@ For the operator $\hat{A}$, $\hat{A}\psi=a\psi$. $a$ in an eigenvalue and $\psi$
     &
     &c_n=\int_0^a\phi_n(x)\Psi(x,0)\,dx
 \end{align}
+
 \subsection*{\underline{Particle on a Ring:}}
 \begin{align}
-    &\psi_\pm(\theta)=\frac{1}{\sqrt{2\pi}}\exp{\pm i\frac{R\theta}{\hbar}\sqrt{2mE}}=\frac{1}{\sqrt{2\pi}}e^{\pm ikx}
+    &\psi_\pm(\theta)=\frac{1}{\sqrt{2\pi}}\exp{\left( \pm i\frac{R\theta}{\hbar}\sqrt{2mE} \right)}
+        = \frac{1}{\sqrt{2\pi}}e^{\pm ikx}
     &
     &x=R\theta; L=2\pi R; k=\frac{2\pi n}{L}=\frac{n}{R}
     \\
@@ -197,6 +219,7 @@ For the operator $\hat{A}$, $\hat{A}\psi=a\psi$. $a$ in an eigenvalue and $\psi$
     &
     &E_n=\frac{n^2\hbar^2}{2mR^2},\quad n=0\pm 1,\pm 2,\pm 3,...
 \end{align}
+
 \subsection*{\underline{Harmonic Oscillator:}}
 \begin{align}
     &V(x)=\frac{1}{2}kx^2=\frac{1}{2}m(\omega x)^2\quad \left( \omega\equiv\sqrt{k/m} \right)
@@ -235,6 +258,7 @@ For the operator $\hat{A}$, $\hat{A}\psi=a\psi$. $a$ in an eigenvalue and $\psi$
     &
     &\int_{-\infty}^{+\infty}\mathcal{H}_n\mathcal{H}_me^{-x^2}dx=2^nn!\sqrt{\pi}\delta_{n,m}
 \end{align}
+
 \subsection*{\underline{Models of Dirac Delta Distribution $\delta(x)$:}}
 \begin{equation}
 \delta(x)=\lim_{\alpha\rightarrow\infty}\frac{\sin(\alpha x)}{\pi x};\ 
@@ -242,6 +266,7 @@ For the operator $\hat{A}$, $\hat{A}\psi=a\psi$. $a$ in an eigenvalue and $\psi$
 \delta(x)=\lim_{\epsilon\rightarrow0}\frac{\Theta(x+\epsilon)-\Theta(\epsilon)}{\epsilon}
 \end{equation}
 where $\Theta(x)$ is Heaviside or step function. 
+
 \subsection*{\underline{Bound State of Single $\delta$-Potential:}}
 \begin{align}
     &V=-\alpha\delta(x), \ \alpha>0
@@ -250,6 +275,7 @@ where $\Theta(x)$ is Heaviside or step function.
     &
     &E=-\frac{m\alpha^2}{2\hbar^2}
 \end{align}
+
 \subsection*{\underline{Scattering State:}}
 \begin{align}
     &V(x)=-\alpha\delta(x)
@@ -260,6 +286,7 @@ where $\Theta(x)$ is Heaviside or step function.
     &
     &R=\frac{|B|^2}{|A|^2}=\frac{\beta}{1+\beta}\qquad (\beta=m\alpha/\hbar^2k)
 \end{align}
+
 \subsection*{\underline{Miscellaneous:}}
 \begin{align}
     \int_{-\infty}^\infty e^{-ax^2}\, dx=\sqrt{\frac{\pi}{a}};
@@ -273,6 +300,7 @@ where $\Theta(x)$ is Heaviside or step function.
         \end{matrix}
     \right.
 \end{align}
+
 \subsection*{\underline{Matrix Algebra:}}
 Let A be a 2X2 matrix defined as:
      $A=\left(
@@ -290,6 +318,7 @@ Let A be a 2X2 matrix defined as:
     \right);
     &&|A| = ad-bc
 \end{align}
+
 \subsection*{\underline{Orbital Angular Momentum:}}
 \begin{gather}
     \hat{L}_{x}=\hat{y} \hat{p}_{z}-\hat{z} \hat{p}_{y}, \quad \hat{L}_{y}=\hat{z} \hat{p}_{x}-\hat{x} \hat{p}_{z}, \quad \hat{L}_{z}=\hat{x} \hat{p}_{y}-\hat{y} \hat{p}_{x} \\
@@ -303,6 +332,7 @@ Let A be a 2X2 matrix defined as:
     \hat{L}^{2}=-\hbar^{2}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
     \hat{L}_{z}=\frac{\hbar}{i} \frac{\partial}{\partial \phi} ; \quad \hat{L}_{\pm}=\hbar e^{\pm i \phi}\left(\pm \frac{\partial}{\partial \theta}+i \cot \theta \frac{\partial}{\partial \phi}\right)=\hat{L}_{x}\pm i\hat{L}_{y}
 \end{gather}
+
 \subsection*{\underline{General Momentum Operator}}
 \begin{flalign}
     &\left[J_x, J_y\right]=i\hbar J_z
@@ -338,6 +368,7 @@ A =
 \end{matrix}\right)
 \end{equation}
 in the above matrix, for a fixed J we denote $\ket{J m}=\ket m$.
+
 \subsection*{\underline{Spin Angular Momentum Operator}}
 For $j=\frac{1}{2}\implies \ket{\uparrow} = \ket{\frac{1}{2},\frac{1}{2}}; \ket{\downarrow} = \ket{\frac{1}{2},-\frac{1}{2}} then:$
 \begin{flalign}
@@ -375,6 +406,7 @@ For $j=\frac{1}{2}\implies \ket{\uparrow} = \ket{\frac{1}{2},\frac{1}{2}}; \ket{
             2     &0
         \end{matrix}\right)
 \end{flalign}
+
 \subsection*{\underline{Spherical Harmonics:}}
 \begin{gather}
     Y_{\ell, m}(\theta, \phi) \equiv \mathcal{N}_{\ell, m} P_{\ell}^{m}(\cos \theta) e^{i m \phi}\\
@@ -383,6 +415,7 @@ For $j=\frac{1}{2}\implies \ket{\uparrow} = \ket{\frac{1}{2},\frac{1}{2}}; \ket{
     \int d \Omega Y_{\ell^{\prime} m^{\prime}}^{*}(\theta, \phi) Y_{\ell m}(\theta, \phi)=\delta_{\ell^{\prime}, \ell} \delta_{m^{\prime}, m}, \quad \int d \Omega=\int_{0}^{2 \pi} d \phi \int_{-1}^{1} d(\cos \theta)\\
     Y_{0,0}(\theta, \phi)=\frac{1}{\sqrt{4 \pi}} ; \quad Y_{1, \pm 1}(\theta, \phi)=\mp \sqrt{\frac{3}{8 \pi}} \sin \theta \exp (\pm i \phi) ; \quad Y_{1,0}(\theta, \phi)=\sqrt{\frac{3}{4 \pi}} \cos \theta
 \end{gather}
+
 \subsection*{\underline{Central Potentials $V(\mathbf{r})=V(r)$:}}
 \begin{gather}
     \left[ \frac{-\hbar^2}{2m}\nabla^2+V(r) \right]\psi(r,\theta,\phi)=E\psi(r,\theta,\phi)\\
@@ -395,6 +428,7 @@ For $j=\frac{1}{2}\implies \ket{\uparrow} = \ket{\frac{1}{2},\frac{1}{2}}; \ket{
     \hat{L}^{2}=-\hbar^{2}\left(\frac{\partial^{2}}{\partial \theta^{2}}+\cot \theta \frac{\partial}{\partial \theta}+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2}}{\partial \phi^{2}}\right) \\
     \hat{L}_{z}=\frac{\hbar}{i} \frac{\partial}{\partial \phi} ; \quad \hat{L}_{\pm}=\hbar e^{\pm i \phi}\left(\pm \frac{\partial}{\partial \theta}+i \cot \theta \frac{\partial}{\partial \phi}\right)=\hat{L}_{x}\pm i\hat{L}_{y}
 \end{gather}
+
 \subsection*{\underline{Hydrogen Atom (Z=1):}}
 \begin{gather}
     H=\frac{\mathbf{p}^{2}}{2 m}-\frac{Z e^{2}}{r} \\
@@ -409,6 +443,7 @@ For $j=\frac{1}{2}\implies \ket{\uparrow} = \ket{\frac{1}{2},\frac{1}{2}}; \ket{
     u_{2,0}(r)=\frac{2 r}{\left(2 a_{0}\right)^{3 / 2}}\left(1-\frac{r}{2 a_{0}}\right) \exp \left(-r / 2 a_{0}\right) \\
     u_{2,1}(r)=\frac{1}{\sqrt{3}} \frac{1}{\left(2 a_{0}\right)^{3 / 2}} \frac{r^{2}}{a_{0}} \exp \left(-r / 2 a_{0}\right)
 \end{gather}
+
 \subsection*{\underline{Spherical Coordinates:}}
 $$
 \begin{aligned}
@@ -424,6 +459,7 @@ $$
 &\hat{\mathbf{z}}=\cos \theta \hat{\mathbf{r}}-\sin \theta \hat{\boldsymbol{\theta}}
 \end{aligned}
 $$
+
 \subsection*{\underline{Identical Particles:}}
 Particles that share the same intrinsic properties: mass, charge, spin, magnetic moment, \dots etc. Identical particles are indistinguishable
 \begin{equation}
@@ -454,11 +490,13 @@ Spin $\frac{1}{2}$ particles can be in any of the following states:
 \end{cases}
 \end{gather}
 \end{enumerate}
+
 \subsection*{\underline{Electron Gas in Volume V:}}
 Each eigenvalue in k-space occupy a volume $\frac{{(2\pi)^3}}{V}$ so that 2 for spin states:
 \begin{equation} \sum_k f(k)=2\frac{V}{(2\pi)^3}\int d^3k f(k) \end{equation}
 Highest occupied wave vector is called Fermi wave vector k$_F$ 
 \begin{equation} k_F = (3\pi^2n)^{1/3}; \, n=\frac{N}{V} \,\, \text{Electronic Density}\end{equation}
+
 \subsection*{\underline{Ground State of N Electrons in Volume V:}}
 
 \begin{align}
@@ -473,12 +511,14 @@ Highest occupied wave vector is called Fermi wave vector k$_F$
 &\\
 & k_F = (3\pi^2n)^{1/3} = \frac{(9\pi /4)^{1/3}}{r_s}=\frac{1.92}{r_s}
 \end{align}
+
 \subsection*{\underline{Bloch Theorem in Solids:}}
 \begin{gather}
 \psi (R+x)=e^{i k\cdot R} \psi (x)\\
 \text{\underline{In $3D$:}}\quad k_i = \frac{2\pi n_i}{L}; \quad i=x, y, z;\quad n=0, \pm1, \pm 2, ... \Rightarrow dn = \frac{V}{(2\pi)^3} dk^3\\
 \sum_{k\sigma}F(k, \sigma)= \frac{V}{(2\pi)^3} \sum_\sigma \int_{}  d k^3 F(k, \sigma)
 \end{gather}
+
 \subsection*{\underline{Probability Distributions:}}
 \paragraph{}We have three distributions, one for classical particles (Maxwell-Boltzmann) and two for undistinguishable particles (Fermi-Dirac for fermions and Bose-Einstein for bosons). Their equations are the following:
 \begin{gather}

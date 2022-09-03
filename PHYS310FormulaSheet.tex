@@ -5,6 +5,7 @@
 \usepackage{listings,multicol,mathtools}
 \usepackage{pdfpages,siunitx,verbatim}
 \usepackage{xfrac,xcolor}
+\usepackage{wrapfig}
 
 \marginsize{1.5cm}{1.5cm}{1cm}{1cm}
 \linespread{1.5}
@@ -474,6 +475,31 @@ $\ket{J,J}\quad\ket{J,J-1}\quad\ket{J,J-2}\quad \dots \quad\ket{J,-J}$\\
     \Psi_{100}(r, \theta, \phi) = \frac{2r}{\sqrt{4 \pi a_0^3}} e^{-r/a_0}
 \end{gather}
 
+\subsection*{\underline{Transfer Matrix}} % (fold)
+\label{sub:Transfer Matrix}
+\begin{align}
+    \begin{bmatrix}
+        F \\ G
+    \end{bmatrix} = M \begin{bmatrix}
+        A \\ B
+    \end{bmatrix} \qquad
+    M = \begin{bmatrix}
+        M_{11}   & M_{12}   \\ 
+        M^*_{12} & M^*_{11}
+    \end{bmatrix} \qquad
+    \det{M} = 1
+\end{align}
+\begin{wrapfigure}{r}{0.35\linewidth}
+    \includegraphics[width=1\linewidth]{arbitrary_V.png}
+    \caption{Scattering from an arbitrary localized potential ($V(x)=0$ except for Region II)}
+    \label{fig:arbitrary localized potential}
+\end{wrapfigure}
+\begin{align}
+    T = \frac{1}{|M_{22}|^2}; \qquad R+T = 1
+\end{align}
+% subsection Transfer Matrix (end)
+
+\newpage
 \subsection*{\underline{Spherical Coordinates:}}
 $$
     \begin{aligned}

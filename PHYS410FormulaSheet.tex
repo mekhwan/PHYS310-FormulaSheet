@@ -597,4 +597,30 @@ Highest occupied wave vector is called Fermi wave vector k$_F$
     \frame{\includegraphics[width=13.5cm]{pt3.pdf}}\\
     \textbf{Figure 3:} Maxwell--Boltzmann Dist. when $\mu=7eV$. For bosons\\
 \end{center}
+
+\subsection*{\underline{Non-Degenerate Perturbation Theory}}
+
+\begin{align}
+	&H = H^0 + \lambda H' = H(\lambda)\\
+	&H(\lambda) \psi_n (\lambda) = E_n (\lambda) \psi_n (\lambda)\\
+	&\psi_n(\lambda) = \psi_n^0 + \lambda \psi_n^1 + \lambda^2 \psi_n^2+\cdots\\
+	&E_n(\lambda) = E_n^0 + \lambda E_n^1 + \lambda^2 E_n^2 + \cdots\\
+	&\text{Assume }\psi_n(\lambda), \, E_n(\lambda) \text{ converges}\\
+\end{align}
+\begin{align}
+	\lambda^0: \quad &H^0|\psi_n^0\rangle = E_n^0 |\psi_n^0\rangle\\
+	\lambda^1: \quad &H^0|\psi_n^1\rangle + H'\psi_n^0 = E_n^0|\psi_n^1\rangle
+	+ E_n^1|\psi_n^0\rangle\\
+	\lambda^2: \quad &H^0|\psi_n^2\rangle + H'\psi_n^1 = E_n^0|\psi_n^2\rangle
+	+ E_n^1|\psi_n^1\rangle + E_n^2|\psi_n^0\rangle
+\end{align}
+
+\begin{align}
+	E_n^1 &= \langle\psi_n^0|H'|\psi_n^0\rangle\\
+	|\psi_n^1\rangle &= \sum_{m\ne n} \frac{\langle \psi_m^0|H'|
+	\psi_n^0\rangle}{E_n^0 - E_m^0} |\psi_m^0\rangle\\
+	E_n^2 &= \langle \psi_n^0 | H' | \psi_n^1\rangle\\
+	E_n^2 &= \sum_{m\ne n} \frac{\left| \langle\psi_m^0|H'|\psi_n^0\rangle 
+	\right|^2}{E_n^0 - E_m^0}
+\end{align}
 \end{document}
